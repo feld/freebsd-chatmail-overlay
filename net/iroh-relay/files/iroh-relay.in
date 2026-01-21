@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# PROVIDE: iroh_relay
+# REQUIRE: DAEMON FILESYSTEMS devfs
+# BEFORE:  LOGIN
+# KEYWORD: nojail shutdown
+#
+. /etc/rc.subr
+
+name=iroh_relay
+rcvar=iroh_relay_enable
+
+load_rc_config $name
+
+: ${iroh_relay_enable:=NO}
+: ${iroh_relay_user:="iroh-relay"}
+
+pidfile="/var/run/${name}.pid"
+command="/usr/sbin/daemon"
+command_args="-T ${name} -P ${pidfile} -r -f -u ${_user} -H %%PREFIX%%/bin/iroh-relay ${iroh_relay_flags}"
+
+run_rc_command "$1"

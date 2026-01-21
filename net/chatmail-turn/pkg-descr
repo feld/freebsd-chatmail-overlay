@@ -1,0 +1,9 @@
+TURN server for chatmail relays
+
+This is a TURN server for chatmail relays based on webrtc.rs stack.
+
+It uses authentication scheme described in so-called REST
+authentication.
+
+The goal is to have a TURN server for use with chatmail relays
+distributed as a single binary.

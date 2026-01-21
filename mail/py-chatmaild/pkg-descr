@@ -1,0 +1,3 @@
+chatmaild provides dovecot authentication to create dovecot users on login and mail filtering
+
+See also: https://github.com/chatmail/relay
