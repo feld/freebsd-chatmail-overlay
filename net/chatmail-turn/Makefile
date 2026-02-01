@@ -1,6 +1,7 @@
 PORTNAME=		chatmail
 DISTVERSIONPREFIX=	v
 DISTVERSION=		0.3
+PORTREVISION=		1
 PKGNAMESUFFIX=	-turn
 CATEGORIES=		net
 
@@ -19,8 +20,8 @@ USE_RC_SUBR=	chatmail_turn
 
 PLIST_FILES=	bin/chatmail-turn
 
-#GROUP=	iroh-relay
-#USER=	iroh-relay
+#GROUP=	vmail
+#USER=	vmail
 
 do-install:
 	${INSTALL_PROGRAM} ${CARGO_TARGET_DIR}/*/chatmail-turn ${STAGEDIR}${LOCALBASE}/bin
