@@ -14,11 +14,11 @@ load_rc_config $name
 
 : ${chatmail_turn_enable:=NO}
 : ${chatmail_turn_realm:="$(/bin/hostname -f)"}
-: ${chatmail_turn_socket:="/var/run/chatmail-turn/turn.socket"}
+: ${chatmail_turn_socket:="/var/run/chatmail-turn.socket"}
 
 pidfile="/var/run/${name}.pid"
 command="/usr/sbin/daemon"
 command_args="-T ${name} -P ${pidfile} -r -f -H -u vmail %%PREFIX%%/bin/chatmail-turn --realm ${chatmail_turn_realm} --socket ${chatmail_turn_socket}"
-start_precmd="install -d -o vmail -g vmail -m 755 ${chatmail_turn_socket%/*}"
+start_precmd="rm -f ${chatmail_turn_socket}"
 
 run_rc_command "$1"
