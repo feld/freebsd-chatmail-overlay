@@ -1,4 +1,4 @@
-TIMESTAMP = 1769975890
+TIMESTAMP = 1777510077
 SHA256 (rust/crates/addr2line-0.25.1.crate) = 1b5d307320b3181d6d7954e663bd7c774a838b8220fe0593c86d9fb09f498b4b
 SIZE (rust/crates/addr2line-0.25.1.crate) = 43134
 SHA256 (rust/crates/adler2-2.0.1.crate) = 320119579fcad9c21884f5c4861d16174d0e06250625266f50fe6898340abefa
@@ -391,5 +391,5 @@ SHA256 (rust/crates/zerovec-0.11.4.crate) = e7aa2bd55086f1ab526693ecbe444205da57
 SIZE (rust/crates/zerovec-0.11.4.crate) = 125080
 SHA256 (rust/crates/zerovec-derive-0.11.1.crate) = 5b96237efa0c878c64bd89c436f661be4e46b2f3eff1ebb976f7ef2321d2f58f
 SIZE (rust/crates/zerovec-derive-0.11.1.crate) = 21294
-SHA256 (chatmail-chatmail-turn-v0.3_GH0.tar.gz) = 4f684d3e7d61b5ab4f3b4f9ad0a7a0805a7050ce9b08a8d9d3abe76c6139dbe3
-SIZE (chatmail-chatmail-turn-v0.3_GH0.tar.gz) = 17038
+SHA256 (chatmail-chatmail-turn-v0.4_GH0.tar.gz) = 7f02b9de8279c6a294d3a65c4c24d3b88b90f865c49d738cca425d1211b6fb22
+SIZE (chatmail-chatmail-turn-v0.4_GH0.tar.gz) = 18229
