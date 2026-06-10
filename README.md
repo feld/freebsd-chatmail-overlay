@@ -13,5 +13,3 @@ I have an incomplete port for `py-chatmaild` in here at the moment because upstr
 `mail/py-chatmaild`: as stated above
 
 `net/chatmail-turn`: Rust based TURN/STUN server used for WebRTC audio/video calls
-
-`net/iroh-relay`: Iroh Relay server also for TURN/STUN. Currently unused, but WebXDC apps use this functionality and currently depend on the official project's relays. Lack of authentication is why it is kept off for now as anyone in the world could use your relay
