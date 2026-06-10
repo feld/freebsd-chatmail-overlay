@@ -6,7 +6,7 @@ I have an incomplete port for `py-chatmaild` in here at the moment because upstr
 
 ## Ports
 
-`mail/dovecot`: has a single patch added and needs to be built with LUA enabled
+`mail/dovecot`: has a single patch added and LUA is enabled by default. Uses PORTEPOCH to ensure priority.
 
 `mail/filtermail`: Rust-based Postfix milter for enforcing only encrypted mails, per-account rate limiting
 
