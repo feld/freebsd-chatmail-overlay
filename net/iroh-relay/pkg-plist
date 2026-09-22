@@ -1,0 +1,2 @@
+bin/iroh-relay
+@sample etc/iroh-relay.toml.sample
