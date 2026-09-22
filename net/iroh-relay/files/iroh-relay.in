@@ -22,7 +22,7 @@ start_cmd="start"
 
 iroh_relay_start()
 {
-	/usr/sbin/daemon -P ${pidfile} -r -f -u ${_user} -H %%PREFIX%%/bin/iroh-relay ${iroh_relay_flags}"
+	/usr/sbin/daemon -P ${pidfile} -r -f -u ${_user} -H %%PREFIX%%/bin/iroh-relay "${iroh_relay_flags}"
 
 	if is_process_running; then
 		echo "Started iroh-relay (pid=$(cat ${pidfile}))"
