@@ -20,8 +20,8 @@ PLIST_FILES=	bin/iroh-relay
 
 CARGO_BUILD_ARGS=	--bin iroh-relay --features=server
 
-GROUP=	iroh-relay
-USER=	iroh-relay
+GROUP=	iroh
+USER=	iroh
 
 do-install:
 	${INSTALL_PROGRAM} ${CARGO_TARGET_DIR}/*/iroh-relay ${STAGEDIR}${LOCALBASE}/bin
