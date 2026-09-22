@@ -11,24 +11,12 @@ name=iroh_relay
 load_rc_config $name
 
 : ${iroh_relay_enable:=NO}
-: ${iroh_relay_user:="iroh"}
-: ${iroh_relay_group:="iroh"}
+: ${iroh_relay_runtimeuser:="iroh"}
+: ${iroh_relay_runtimegroup:="iroh"}
 : ${iroh_relay_config:="%%PREFIX%%/etc/iroh-relay.toml"}
 
-command="/usr/bin/true"
-procname="/usr/sbin/daemon"
 pidfile="/var/run/${name}.pid"
-start_cmd=iroh_relay_start
-
-iroh_relay_start()
-{
-	/usr/sbin/daemon -P ${pidfile} -r -f -u ${_user} -H %%PREFIX%%/bin/iroh-relay -c "${iroh_relay_config}" "${iroh_relay_flags}"
-
-	if is_process_running; then
-		echo "Started iroh-relay (pid=$(cat ${pidfile}))"
-	else
-		echo "Failed to start iroh-relay"
-	fi
-}
+command=/usr/sbin/daemon
+command_args="-P ${pidfile} -r -f -u ${iroh_relay_runtimeuser} -H %%PREFIX%%/bin/iroh-relay -c "${iroh_relay_config}" "${iroh_relay_flags}"
 
 run_rc_command "$1"
