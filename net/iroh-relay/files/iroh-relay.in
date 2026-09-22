@@ -18,7 +18,7 @@ load_rc_config $name
 command="/usr/bin/true"
 procname="/usr/sbin/daemon"
 pidfile="/var/run/${name}.pid"
-start_cmd="start"
+start_cmd=iroh_relay_start
 
 iroh_relay_start()
 {
