@@ -15,8 +15,8 @@ load_rc_config $name
 : ${iroh_relay_runtimegroup:="iroh"}
 : ${iroh_relay_config:="%%PREFIX%%/etc/iroh-relay.toml"}
 
-pidfile="/var/run/${name}.pid"
+pidfile=/var/run/${name}.pid
 command=/usr/sbin/daemon
-command_args="-P ${pidfile} -r -f -u ${iroh_relay_runtimeuser} -H %%PREFIX%%/bin/iroh-relay -c "${iroh_relay_config}" "${iroh_relay_flags}"
+command_args="-P ${pidfile} -r -f -u ${iroh_relay_runtimeuser} -H %%PREFIX%%/bin/iroh-relay -c ${iroh_relay_config} ${iroh_relay_flags}"
 
 run_rc_command "$1"
