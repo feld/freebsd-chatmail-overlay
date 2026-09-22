@@ -6,8 +6,7 @@
 #
 . /etc/rc.subr
 
-name=iroh-relay
-rcvar=iroh_relay_enable
+name=iroh_relay
 
 load_rc_config $name
 
