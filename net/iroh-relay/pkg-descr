@@ -1,0 +1,10 @@
+Iroh's relay is a feature within iroh, a peer-to-peer networking system
+designed to facilitate direct, encrypted connections between devices.
+Iroh aims to simplify decentralized communication by automatically
+handling connections through "relays" when direct connections aren't
+immediately possible. The relay server helps establish connections by
+temporarily routing encrypted traffic until a direct, P2P connection is
+feasible. Once this direct path is set up, the relay server steps back,
+and the data flows directly between devices. This approach allows Iroh
+to maintain a secure, low-latency connection, even in challenging
+network situations.
