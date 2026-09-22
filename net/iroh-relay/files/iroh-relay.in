@@ -1,12 +1,12 @@
 #!/bin/sh
 
-# PROVIDE: iroh_relay
+# PROVIDE: iroh-relay
 # REQUIRE: DAEMON LOGIN
 # KEYWORD: shutdown
 #
 . /etc/rc.subr
 
-name=iroh_relay
+name=iroh-relay
 rcvar=iroh_relay_enable
 
 load_rc_config $name

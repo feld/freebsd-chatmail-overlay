@@ -1,4 +1,5 @@
 PORTNAME=		iroh
+PORTREVISION=		1
 DISTVERSIONPREFIX=	v
 DISTVERSION=		0.35.0
 PKGNAMESUFFIX=	-relay
@@ -14,7 +15,7 @@ USES=		cargo
 USE_GITHUB=	yes
 GH_ACCOUNT=	n0-computer
 
-USE_RC_SUBR=	iroh_relay
+USE_RC_SUBR=	iroh-relay
 
 PLIST_FILES=	bin/iroh-relay
 
