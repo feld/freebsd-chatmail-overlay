@@ -13,3 +13,22 @@ I have an incomplete port for `py-chatmaild` in here at the moment because upstr
 `mail/py-chatmaild`: as stated above
 
 `net/chatmail-turn`: Rust based TURN/STUN server used for WebRTC audio/video calls
+
+## Poudriere
+
+Assuming you're building these packages with Poudriere and you deployed this
+overlay under the name "chatmail", you should create a
+`/usr/local/etc/poudriere.d/chatmail-make.conf` file with these
+contents:
+
+```
+mail_dovecot_SET= LUA
+
+OVERLAYS+=/usr/local/poudriere/ports/chatmail/
+UID_FILES=${PORTSDIR}/UIDs /overlays/chatmail/UIDs.local
+GID_FILES=${PORTSDIR}/GIDs /overlays/chatmail/GIDs.local
+
+.if ${.CURDIR} == ${PORTSDIR}/mail/dovecot
+EXTRA_PATCHES+= /overlays/chatmail/patches/dovecot/patch-debounce
+.endif
+```
